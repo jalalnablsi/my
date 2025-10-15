@@ -20,7 +20,7 @@ export const translations: Translations = {
       recommended_fix: 'Recommended Fix:',
       security_analysis: 'Security Analysis',
       seo_analysis: 'SEO Performance Analysis',
-      download_report: 'Download PDF Report',
+      download_report: 'Download Report',
       summary_title: 'Assessment Summary & Next Steps',
       summary_text: 'Your website structure has been analyzed against modern standards. Implement the recommended fixes to significantly enhance your security, SEO, and readiness for AI content consumption (GEO).',
       geo_insights: 'AI Readiness Insights',
@@ -35,8 +35,8 @@ export const translations: Translations = {
       passed_header_title: 'Check Passed',
       ssl_ok_desc: 'The site uses a valid SSL/TLS certificate with a strong protocol (TLS 1.2+).',
       no_issue_desc: 'Your site successfully implements this check.',
-      threat_check_title: 'Google Safe Browsing Threat Check',
-      threat_safe_desc: 'The URL is classified as safe by Google Safe Browsing and is free from known malware or phishing threats.',
+      threat_check_title: 'Malicious Content Scan',
+      threat_safe_desc: 'The URL is classified as safe and is free from known malware or phishing threats.',
       threat_critical_desc: 'CRITICAL THREAT: The URL is flagged as potentially malicious (e.g., malware, phishing, or unwanted software). Exercise extreme caution.',
       threat_error_desc: 'Could not complete the Safe Browsing check. The API key might be missing or there was a service error.',
       expiration_date: 'Expiration Date',
@@ -68,7 +68,9 @@ export const translations: Translations = {
       about_how_li2: "<strong>Start the Scan:</strong> Click the 'Start Scan' button. Our AI-powered engine will begin analyzing your site in real-time.",
       about_how_li3: "<strong>Review Your Report:</strong> Within seconds, you'll receive a detailed report with your scores, identified issues, and clear, actionable recommendations for fixing them.",
       about_footer_h2: "Join Us in Building a Better Web",
-      about_footer_p1: "We are committed to continuously improving NexusAudit. Start your first scan today and take the first step towards a more secure, visible, and future-proof website."
+      about_footer_p1: "We are committed to continuously improving NexusAudit. Start your first scan today and take the first step towards a more secure, visible, and future-proof website.",
+      powered_by_google: "Powered by Google Safe Browsing",
+      no_issues_found: "No issues were found in this category. Great job!",
     },
     ar: {
       title: 'NexusAudit: محلل أمان الويب وجاهزية الذكاء الاصطناعي',
@@ -89,7 +91,7 @@ export const translations: Translations = {
       recommended_fix: 'الإصلاح الموصى به:',
       security_analysis: 'تحليل الأمان',
       seo_analysis: 'تحليل أداء SEO',
-      download_report: 'تحميل تقرير PDF',
+      download_report: 'تحميل التقرير',
       summary_title: 'ملخص التقييم والخطوات التالية',
       summary_text: 'تم تحليل هيكل موقعك مقابل المعايير الحديثة. قم بتطبيق الإصلاحات الموصى بها لتعزيز وضع الأمان، وتحسين SEO، وزيادة جاهزيتك لاستهلاك المحتوى من قبل الذكاء الاصطناعي (GEO).',
       geo_insights: 'رؤى جاهزية الذكاء الاصطناعي',
@@ -104,8 +106,8 @@ export const translations: Translations = {
       passed_header_title: 'اجتياز الفحص',
       ssl_ok_desc: 'يستخدم الموقع شهادة SSL/TLS صالحة ببروتوكول قوي (TLS 1.2+).',
       no_issue_desc: 'موقعك يطبق هذا الضابط بنجاح.',
-      threat_check_title: 'فحص الروابط الخبيثة (Safe Browsing)',
-      threat_safe_desc: 'الرابط مصنّف على أنه آمن من قبل Google Safe Browsing وخالي من البرامج الضارة أو التصيد الاحتيالي المعروفة.',
+      threat_check_title: 'فحص المحتوى الضار',
+      threat_safe_desc: 'الرابط مصنّف على أنه آمن وخالي من البرامج الضارة أو التصيد الاحتيالي المعروفة.',
       threat_critical_desc: 'تهديد حرج: تم وضع علامة على الرابط على أنه ضار محتمل (مثل برامج ضارة، تصيد احتيالي، أو برامج غير مرغوب فيها). توخَ الحذر الشديد.',
       threat_error_desc: 'تعذر إكمال فحص Safe Browsing. قد يكون مفتاح API مفقودًا أو حدث خطأ في الخدمة.',
       expiration_date: 'تاريخ الانتهاء',
@@ -137,7 +139,9 @@ export const translations: Translations = {
       about_how_li2: "<strong>ابدأ الفحص:</strong> انقر فوق زر 'بدء الفحص'. سيبدأ محركنا المدعوم بالذكاء الاصطناعي في تحليل موقعك في الوقت الفعلي.",
       about_how_li3: "<strong>راجع تقريرك:</strong> في غضون ثوانٍ، ستتلقى تقريرًا مفصلاً بنتائجك والمشكلات المحددة وتوصيات واضحة وقابلة للتنفيذ لإصلاحها.",
       about_footer_h2: "انضم إلينا في بناء ويب أفضل",
-      about_footer_p1: "نحن ملتزمون بالتحسين المستمر لـ NexusAudit. ابدأ فحصك الأول اليوم واتخذ الخطوة الأولى نحو موقع ويب أكثر أمانًا وظهورًا ومقاومة للمستقبل."
+      about_footer_p1: "نحن ملتزمون بالتحسين المستمر لـ NexusAudit. ابدأ فحصك الأول اليوم واتخذ الخطوة الأولى نحو موقع ويب أكثر أمانًا وظهورًا ومقاومة للمستقبل.",
+      powered_by_google: "مدعوم بواسطة Google Safe Browsing",
+      no_issues_found: "لم يتم العثور على أي مشاكل في هذه الفئة. عمل رائع!",
     }
   };
 

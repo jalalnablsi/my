@@ -32,7 +32,7 @@ const ResultsDashboard: FC<ResultsDashboardProps> = ({ results, t, lang, onReset
       setTimeout(() => {
         const a = document.createElement('a');
         a.href = downloadLink;
-        a.download = `NexusAudit_Report_for_${new URL(results.security.url).hostname}.pdf`;
+        a.download = `NexusAudit_Report_for_${new URL(results.security.url).hostname}.txt`;
         a.target = '_blank';
         document.body.appendChild(a);
         a.click();

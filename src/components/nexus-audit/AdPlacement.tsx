@@ -10,12 +10,16 @@ const AdPlacement: React.FC<AdPlacementProps> = ({ shouldDisplay }) => {
   useEffect(() => {
     if (!shouldDisplay) return;
 
+    // This is a simplified ad loader.
+    // In a real-world scenario, you would use a more robust solution
+    // like Google AdSense or other ad network providers.
     const loadAd = () => {
       const containerId = "container-310b3ae09cc0f1a0bf6cddf16a8d49b5";
       const container = document.getElementById(containerId);
       
+      // Check if the ad has already been loaded to avoid re-injecting the script
       if (container && container.getAttribute('data-ad-loaded') !== 'true') {
-        container.innerHTML = '';
+        container.innerHTML = ''; // Clear previous content
         
         const script = document.createElement('script');
         script.async = true;
@@ -27,7 +31,9 @@ const AdPlacement: React.FC<AdPlacementProps> = ({ shouldDisplay }) => {
       }
     };
 
+    // Delay loading to ensure the component is mounted and to improve perceived performance
     const timer = setTimeout(loadAd, 100); 
+    
     return () => {
       clearTimeout(timer);
       const script = document.querySelector('script[src*="effectivegatecpm.com"]');

@@ -16,29 +16,29 @@ const ThreatCheckCard: React.FC<ThreatCheckCardProps> = ({ threatData, t }) => {
     safe: {
       color: 'text-accent',
       bg: 'bg-emerald-400/10',
-      border: 'border-emerald-400/30',
-      icon: <Lock className="w-6 h-6 text-accent" />,
+      border: 'border-emerald-700/50',
+      icon: <Lock className="w-8 h-8 text-accent" />,
       title: t.safe
     },
     critical: {
       color: 'text-rose-400',
       bg: 'bg-rose-400/10',
-      border: 'border-rose-400/30',
-      icon: <AlertTriangle className="w-6 h-6 text-rose-400" />,
+      border: 'border-rose-700/50',
+      icon: <AlertTriangle className="w-8 h-8 text-rose-400" />,
       title: t.critical
     },
     error: {
       color: 'text-slate-400',
       bg: 'bg-slate-400/10',
-      border: 'border-slate-400/30',
-      icon: <AlertTriangle className="w-6 h-6 text-slate-400" />,
+      border: 'border-slate-700/50',
+      icon: <AlertTriangle className="w-8 h-8 text-slate-400" />,
       title: t.error
     }
   }[status] || {
     color: 'text-slate-400',
     bg: 'bg-slate-400/10',
-    border: 'border-slate-400/30',
-    icon: <AlertTriangle className="w-6 h-6 text-slate-400" />,
+    border: 'border-slate-700/50',
+    icon: <AlertTriangle className="w-8 h-8 text-slate-400" />,
     title: t.error
   };
 
@@ -59,19 +59,24 @@ const ThreatCheckCard: React.FC<ThreatCheckCardProps> = ({ threatData, t }) => {
         <div className={`p-3 rounded-full ${config.bg} flex-shrink-0`}>
           {config.icon}
         </div>
-        <h3 className={`text-2xl font-bold ${config.color} font-headline`}>{t.threat_check_title}</h3>
+        <div>
+          <h3 className={`text-2xl font-bold ${config.color} font-headline`}>{t.threat_check_title}</h3>
+          <p className="text-gray-400">{t.powered_by_google}</p>
+        </div>
       </div>
       <p className="text-gray-300 leading-relaxed text-lg mb-4">
         {description}
       </p>
       {status === 'critical' && (
-        <p className="text-rose-300 text-sm mt-2 font-code">
-          <span className="font-semibold">{(t.title.includes('NexusAudit:')) ? 'Detected Threat Types:' : 'أنواع التهديد المكتشفة:'}</span> {threatList}
-        </p>
+        <div className="bg-rose-900/40 p-4 rounded-lg mt-4">
+          <p className="text-rose-200 text-sm font-code">
+            <span className="font-semibold font-body">{(t.title.includes('NexusAudit:')) ? 'Detected Threat Types:' : 'أنواع التهديد المكتشفة:'}</span> {threatList}
+          </p>
+        </div>
       )}
       {threatData?.disclaimer && (
-        <p className="text-gray-500 text-xs mt-3">
-          {threatData.disclaimer}
+        <p className="text-gray-500 text-xs mt-4">
+          * {threatData.disclaimer}
         </p>
       )}
     </div>

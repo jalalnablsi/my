@@ -27,11 +27,11 @@ const AnalysisSection: React.FC<AnalysisSectionProps> = ({ title, icon: Icon, ic
 
   return (
     <div className="mt-12">
-      <h2 className={`text-3xl font-bold text-gray-100 mb-6 border-b ${borderColor} pb-3 flex items-center gap-3 font-headline`}>
-        <Icon className={`w-7 h-7 ${iconColor}`}/> {title}
+      <h2 className={`text-3xl font-bold text-gray-100 mb-6 border-b-2 ${borderColor} pb-4 flex items-center gap-3 font-headline`}>
+        <Icon className={`w-8 h-8 ${iconColor}`}/> {title}
       </h2>
       
-      {failed.length > 0 && (
+      {failed.length > 0 ? (
         <>
           <h3 className="text-xl font-semibold text-rose-400 mb-4">{t.failed_checks} ({failed.length})</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -40,6 +40,10 @@ const AnalysisSection: React.FC<AnalysisSectionProps> = ({ title, icon: Icon, ic
             ))}
           </div>
         </>
+      ) : (
+        <div className="bg-gray-900/60 backdrop-blur-xl rounded-xl p-6 border border-emerald-700/50 text-center">
+            <p className="text-lg text-gray-300">{t.no_issues_found}</p>
+        </div>
       )}
 
       {passed.length > 0 && (
@@ -47,7 +51,7 @@ const AnalysisSection: React.FC<AnalysisSectionProps> = ({ title, icon: Icon, ic
           <Button
             variant="link"
             onClick={() => setShowPassed(!showPassed)}
-            className="flex items-center gap-2 text-accent hover:text-green-300 font-semibold transition-colors duration-200 p-0"
+            className="flex items-center gap-2 text-accent hover:text-green-300 font-semibold transition-colors duration-200 p-0 text-base"
           >
             {showPassed ? t.hide_passed : t.view_passed} ({passed.length})
             {showPassed ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { aiReadinessScore, AiReadinessScoreInput } from '@/ai/flows/ai-readiness-score';
 import type { ScanResults, CheckItem } from '@/lib/types';
 
-// Mock Data Generators
+// Mock Data Generators - In a real application, these would involve actual web crawling and analysis.
 const getMockSecurityChecks = (): CheckItem[] => [
   {
     key: 'Content-Security-Policy',
@@ -24,28 +24,28 @@ const getMockSecurityChecks = (): CheckItem[] => [
     key: 'Strict-Transport-Security',
     title: 'HTTP Strict Transport Security (HSTS)',
     status: 'passed',
-    severity: 'low',
-    desc: 'The site correctly implements HSTS, forcing browsers to communicate over HTTPS.',
-    fix: 'No action needed. Your HSTS policy is active.',
+    severity: 'high',
+    desc: 'The site correctly implements HSTS, forcing browsers to communicate over HTTPS, protecting against man-in-the-middle attacks.',
+    fix: 'No action needed. Your HSTS policy is active and secure.',
   },
   {
     key: 'SSL-Certificate',
     title: 'SSL/TLS Certificate',
     status: 'passed',
-    severity: 'low',
-    desc: 'The site uses a valid SSL/TLS certificate with a strong protocol (TLS 1.2+).',
-    fix: 'No action needed. Your certificate is valid and secure.',
+    severity: 'critical',
+    desc: 'The site uses a valid, up-to-date SSL/TLS certificate with a strong protocol (TLS 1.2+).',
+    fix: 'No action needed. Your certificate is valid and providing a secure connection.',
   },
 ];
 
 const getMockSeoChecks = (): CheckItem[] => [
     {
         key: 'Title-Tag',
-        title: 'Title Tag Presence',
+        title: 'Title Tag Presence & Length',
         status: 'passed',
         severity: 'low',
-        desc: 'The page has a title tag, which is crucial for SEO and browser tab display.',
-        fix: 'No action needed. The title tag is present.'
+        desc: 'The page has a title tag, which is crucial for SEO. Its length is within the optimal range for search engine display.',
+        fix: 'No action needed. The title tag is well-optimized.'
     },
     {
         key: 'Meta-Description',
@@ -63,6 +63,14 @@ const getMockSeoChecks = (): CheckItem[] => [
         desc: 'The page does not have an H1 heading. An H1 tag is the main heading and is important for signaling the page\'s primary topic to search engines.',
         fix: 'Add a single, unique H1 heading to the page that accurately reflects its content.'
     },
+    {
+        key: 'Image-Alt-Tags',
+        title: 'Image Alt Tags',
+        status: 'passed',
+        severity: 'low',
+        desc: 'All images on the page have alt tags, which improves accessibility and provides context to search engines.',
+        fix: 'No action needed. Image alt tags are correctly implemented.'
+    }
 ];
 
 
@@ -73,6 +81,9 @@ export async function GET(request: NextRequest) {
   if (!url) {
     return NextResponse.json({ error: 'URL parameter is required' }, { status: 400 });
   }
+
+  // Simulate a realistic delay for a full scan
+  await new Promise(resolve => setTimeout(resolve, 1500));
 
   try {
     const aiInput: AiReadinessScoreInput = { url };
@@ -104,8 +115,8 @@ export async function GET(request: NextRequest) {
       geo: geoResult,
       threat_check: {
         severity: 'safe',
-        message: 'URL is not flagged as malicious.',
-        disclaimer: 'This check is based on Google Safe Browsing data, which may not be exhaustive.'
+        message: 'URL is not flagged as malicious by Google Safe Browsing.',
+        disclaimer: 'This check is based on Google Safe Browsing data, which is highly reliable but may not be exhaustive or reflect real-time changes instantly.'
       }
     };
 

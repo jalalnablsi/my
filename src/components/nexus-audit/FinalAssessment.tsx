@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { RefreshCw } from 'lucide-react';
 
 interface FinalAssessmentProps {
   onReset: () => void;
@@ -14,13 +15,14 @@ const FinalAssessment: React.FC<FinalAssessmentProps> = ({ onReset, t }) => (
       <h3 className="text-3xl font-bold text-gray-100 mb-6 font-headline">
         {t.summary_title}
       </h3>
-      <p className="text-gray-300 text-lg leading-relaxed mb-6 max-w-4xl mx-auto">
+      <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
         {t.summary_text}
       </p>
       <Button 
         onClick={onReset} 
-        className="h-auto inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+        className="h-auto inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-lg"
       >
+        <RefreshCw className="w-5 h-5"/>
         {t.start_new_scan}
       </Button>
     </div>
