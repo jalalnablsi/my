@@ -20,6 +20,7 @@ export default {
         body: ['Inter', 'sans-serif'],
         headline: ['Inter', 'sans-serif'],
         code: ['Source Code Pro', 'monospace'],
+        cairo: ['Cairo', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

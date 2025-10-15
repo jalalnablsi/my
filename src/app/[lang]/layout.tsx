@@ -13,8 +13,9 @@ export default function LangLayout({
   params: { lang: Lang };
 }) {
   const dir = params.lang === 'ar' ? 'rtl' : 'ltr';
+  const fontClass = params.lang === 'ar' ? 'font-cairo' : 'font-body';
   return (
-    <div dir={dir} className="font-body">
+    <div dir={dir} className={fontClass}>
       {children}
     </div>
   );
