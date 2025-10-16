@@ -85,6 +85,14 @@ const NexusAuditPage: FC<PageProps> = ({ params: { lang } }) => {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-16">
+        
+        {/* Smart H1 */}
+        <h1 style={{position: 'absolute', left: '-9999px'}}>
+          {lang === 'ar' 
+            ? 'أداة مجانية لتحليل رؤوس أمان المواقع - نيكزس أوديت' 
+            : 'Free Security Headers Analyzer Tool - Nexus Audit'}
+        </h1>
+
         <Header lang={lang} t={t} />
 
         <div className="max-w-4xl mx-auto mb-16">

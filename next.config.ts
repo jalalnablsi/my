@@ -2,7 +2,7 @@ import type {NextConfig} from 'next';
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://pl27855348.effectivegatecpm.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://pl27855348.effectivegatecpm.com https://www.googletagmanager.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://picsum.photos https://images.unsplash.com https://placehold.co;
     font-src 'self' https://fonts.gstatic.com;
@@ -12,7 +12,7 @@ const cspHeader = `
     frame-ancestors 'none';
     frame-src 'self' https://pl27855348.effectivegatecpm.com/;
     manifest-src 'self';
-    connect-src 'self';
+    connect-src 'self' https://region1.google-analytics.com https://analytics.google.com;
     upgrade-insecure-requests;
 `;
 
