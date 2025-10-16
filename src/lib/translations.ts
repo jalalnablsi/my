@@ -71,6 +71,9 @@ export const translations: Translations = {
       about_footer_p1: "We are committed to continuously improving NexusAudit. Start your first scan today and take the first step towards a more secure, visible, and future-proof website.",
       powered_by_google: "Powered by Google Safe Browsing",
       no_issues_found: "No issues were found in this category. Great job!",
+      why_nexus_audit_title: "Why NexusAudit? A Comprehensive, Free, and AI-Powered Tool",
+      why_nexus_audit_p1: "NexusAudit provides a holistic analysis of your website's health, combining security, SEO, and AI readiness into one actionable report. We empower you to find and fix vulnerabilities, climb search engine rankings, and prepare for the future of AI-driven search.",
+      why_nexus_audit_p2: "Our tool goes beyond simple checks. We use advanced language models to give you a unique AI Readiness (GEO) score, ensuring your content is understandable not just by humans, but by the next generation of generative AI engines.",
     },
     ar: {
       title: 'NexusAudit: محلل أمان الويب وجاهزية الذكاء الاصطناعي',
@@ -142,6 +145,9 @@ export const translations: Translations = {
       about_footer_p1: "نحن ملتزمون بالتحسين المستمر لـ NexusAudit. ابدأ فحصك الأول اليوم واتخذ الخطوة الأولى نحو موقع ويب أكثر أمانًا وظهورًا ومقاومة للمستقبل.",
       powered_by_google: "مدعوم بواسطة Google Safe Browsing",
       no_issues_found: "لم يتم العثور على أي مشاكل في هذه الفئة. عمل رائع!",
+      why_nexus_audit_title: "لماذا NexusAudit؟ أداة شاملة ومجانية ومدعومة بالذكاء الاصطناعي",
+      why_nexus_audit_p1: "يوفر NexusAudit تحليلًا شاملاً لصحة موقع الويب الخاص بك، حيث يجمع بين الأمان وتحسين محركات البحث وجاهزية الذكاء الاصطناعي في تقرير واحد قابل للتنفيذ. نحن نمكّنك من العثور على نقاط الضعف وإصلاحها، والارتقاء في تصنيفات محركات البحث، والاستعداد لمستقبل البحث القائم على الذكاء الاصطناعي.",
+      why_nexus_audit_p2: "أداتنا تتجاوز الفحوصات البسيطة. نستخدم نماذج لغوية متقدمة لمنحك درجة فريدة من نوعها لجاهزية الذكاء الاصطناعي (GEO)، مما يضمن أن المحتوى الخاص بك ليس مفهومًا من قبل البشر فحسب، بل من قبل الجيل القادم من محركات الذكاء الاصطناعي التوليدية.",
     }
   };
 

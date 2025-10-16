@@ -108,6 +108,18 @@ const NexusAuditPage: FC<PageProps> = ({ params: { lang } }) => {
             onReset={handleReset}
           />
         )}
+
+        {!isScanning && !scanResults && (
+            <section className="max-w-5xl mx-auto my-16 text-center">
+                <div className="bg-gray-900/60 backdrop-blur-xl rounded-2xl p-10 border border-gray-700/50">
+                    <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-300 mb-6 font-headline">
+                        {t.why_nexus_audit_title}
+                    </h2>
+                    <p className="text-lg text-gray-300 leading-relaxed mb-4">{t.why_nexus_audit_p1}</p>
+                    <p className="text-lg text-gray-300 leading-relaxed">{t.why_nexus_audit_p2}</p>
+                </div>
+            </section>
+        )}
       </div>
     </div>
   );
