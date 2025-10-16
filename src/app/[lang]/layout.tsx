@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { lang: Lang } }, p
   const enMetadata = {
     title: "Free Security Headers Analyzer | Website Security Test Tool",
     description: "Test your website's HTTP Security Headers instantly and for free. Analyze CSP, HSTS, X-Frame-Options, and more. Improve your site's security score today!",
-    keywords: ["security headers", "HTTP headers analyzer", "website security test", "CSP analyzer", "HSTS checker", "X-Frame-Options", "Content-Security-Policy", "free website security tool"],
+    keywords: ["security headers", "http headers", "security header analysis", "website security test", "csp analyzer", "hsts checker", "x-frame-options", "content-security-policy", "http security headers", "test security headers", "free website security tool", "check http headers", "securityheaders.com alternative"],
     openGraph: {
       title: "Security Headers Analyzer - Free Website Security Test",
       description: "Instantly test your website’s security headers and improve your protection against attacks.",
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: { lang: Lang } }, p
   const arMetadata = {
     title: "أداة مجانية لتحليل رؤوس الأمان | اختبار أمان المواقع",
     description: "اختبر رؤوس أمان HTTP لموقعك فورًا ومجانًا. حلل CSP، HSTS، X-Frame-Options، وغيرها. حسّن درجة أمان موقعك اليوم!",
-    keywords: ["رؤوس الأمان", "تحليل رؤوس HTTP", "اختبار أمان المواقع", "محلل CSP", "فاحص HSTS", "X-Frame-Options", "أداة أمان مجانية للمواقع"],
+    keywords: ["رؤوس الأمان", "تحليل رؤوس http", "اختبار أمان المواقع", "محلل csp", "فاحص hsts", "x-frame-options", "content-security-policy", "فحص رؤوس الأمان", "أداة أمان مجانية للمواقع", "بديل securityheaders.com"],
     openGraph: {
       title: "محلل رؤوس الأمان - اختبار مجاني لأمان موقعك",
       description: "اختبر رؤوس أمان موقعك فورًا وحسّن حمايتك ضد الهجمات.",
